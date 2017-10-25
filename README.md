@@ -75,7 +75,7 @@ func main() {
 
 ## Examples
 
-Examples can be found in the `examples/` directory. Run them
+Examples can be found in the `_examples/` directory. Run them
 to see basic behavior:
 
 ```bash
@@ -83,8 +83,8 @@ go get github.com/kataras/survey
 
 # ... navigate to the repo in your GOPATH
 
-go run examples/simple.go
-go run examples/validation.go
+go run _examples/simple/simple.go
+go run _examples/validation/validation.go
 ```
 
 ## Prompts
