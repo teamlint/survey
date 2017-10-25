@@ -1,3 +1,13 @@
+# Changes
+
+- Misspell and the Transform feature.
+- Fix if Confirm and `Validate: survey.Required` is used
+and answer is "No" (== false)
+then it shows "Sorry, your reply was invalid: Value is required"
+and it stucks there.
+This happens because 'false' is the zero value of a "bool" type.validation.go#isZero.
+- Vendors manually added, carefully.
+
 # Survey[![Build Status](https://travis-ci.org/kataras/survey.svg?branch=feature%2Fpretty)](https://travis-ci.org/kataras/survey)[![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg)](https://godoc.org/github.com/kataras/survey)
 
 A library for building interactive prompts. Heavily inspired by the great [inquirer.js](https://github.com/SBoudrias/Inquirer.js/).
