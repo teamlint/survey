@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"gopkg.in/AlecAivazis/survey.v1"
+	"github.com/kataras/survey"
 )
 
 // the questions to ask
@@ -13,8 +13,7 @@ var simpleQs = []*survey.Question{
 		Prompt: &survey.Input{
 			Message: "What is your name?",
 		},
-		Validate:  survey.Required,
-		Transform: survey.Title,
+		Validate: survey.Required,
 	},
 	{
 		Name: "color",
@@ -27,18 +26,15 @@ var simpleQs = []*survey.Question{
 }
 
 func main() {
-	answers := struct {
-		Name  string
-		Color string
-	}{}
+	ansmap := make(map[string]interface{})
 
 	// ask the question
-	err := survey.Ask(simpleQs, &answers)
+	err := survey.Ask(simpleQs, &ansmap)
 
 	if err != nil {
 		fmt.Println(err.Error())
 		return
 	}
 	// print the answers
-	fmt.Printf("%s chose %s.\n", answers.Name, answers.Color)
+	fmt.Printf("%s chose %s.\n", ansmap["name"], ansmap["color"])
 }

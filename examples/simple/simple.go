@@ -3,22 +3,23 @@ package main
 import (
 	"fmt"
 
-	"gopkg.in/AlecAivazis/survey.v1"
+	"github.com/kataras/survey"
 )
 
+// the questions to ask
 var simpleQs = []*survey.Question{
+	{
+		Name: "name",
+		Prompt: &survey.Input{
+			Message: "What is your name?",
+		},
+		Validate:  survey.Required,
+		Transform: survey.Title,
+	},
 	{
 		Name: "color",
 		Prompt: &survey.Select{
-			Message: "select1:",
-			Options: []string{"red", "blue", "green"},
-		},
-		Validate: survey.Required,
-	},
-	{
-		Name: "color2",
-		Prompt: &survey.Select{
-			Message: "select2:",
+			Message: "Choose a color:",
 			Options: []string{"red", "blue", "green"},
 		},
 		Validate: survey.Required,
@@ -27,9 +28,10 @@ var simpleQs = []*survey.Question{
 
 func main() {
 	answers := struct {
-		Color  string
-		Color2 string
+		Name  string
+		Color string
 	}{}
+
 	// ask the question
 	err := survey.Ask(simpleQs, &answers)
 
@@ -38,5 +40,5 @@ func main() {
 		return
 	}
 	// print the answers
-	fmt.Printf("%s and %s.\n", answers.Color, answers.Color2)
+	fmt.Printf("%s chose %s.\n", answers.Name, answers.Color)
 }
