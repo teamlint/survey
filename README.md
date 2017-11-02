@@ -14,7 +14,7 @@ A library for building interactive prompts. Heavily inspired by the great [inqui
 
 ![](https://zippy.gfycat.com/AmusingBossyArrowworm.gif)
 
-Created by [AlecAivazis](https://github.com/AlecAivazis).
+Created by [AlecAivazis](https://github.com/AlecAivazis/).
 
 ```go
 package main
