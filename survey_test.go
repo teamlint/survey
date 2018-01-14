@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/kataras/survey/core"
 	"github.com/stretchr/testify/assert"
+	"github.com/teamlint/survey/core"
 )
 
 func init() {

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/kataras/survey"
+	"github.com/teamlint/survey"
 )
 
 // the questions to ask

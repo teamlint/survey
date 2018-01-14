@@ -8,7 +8,7 @@ and it stucks there.
 This happens because 'false' is the zero value of a "bool" type.validation.go#isZero.
 - Vendors manually added, carefully.
 
-# Survey[![Build Status](https://travis-ci.org/kataras/survey.svg?branch=feature%2Fpretty)](https://travis-ci.org/kataras/survey)[![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg)](https://godoc.org/github.com/kataras/survey)
+# Survey[![Build Status](https://travis-ci.org/kataras/survey.svg?branch=feature%2Fpretty)](https://travis-ci.org/kataras/survey)[![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg)](https://godoc.org/github.com/teamlint/survey)
 
 A library for building interactive prompts. Heavily inspired by the great [inquirer.js](https://github.com/SBoudrias/Inquirer.js/).
 
@@ -21,7 +21,7 @@ package main
 
 import (
     "fmt"
-    "github.com/kataras/survey"
+    "github.com/teamlint/survey"
 )
 
 // the questions to ask
@@ -89,7 +89,7 @@ Examples can be found in the `_examples/` directory. Run them
 to see basic behavior:
 
 ```bash
-go get github.com/kataras/survey
+go get github.com/teamlint/survey
 
 # ... navigate to the repo in your GOPATH
 
@@ -238,8 +238,8 @@ looks for by setting the `HelpInputRune` variable in `survey/core`:
 ```golang
 
 import (
-    "github.com/kataras/survey"
-    surveyCore "github.com/kataras/survey/core"
+    "github.com/teamlint/survey"
+    surveyCore "github.com/teamlint/survey/core"
 )
 
 number := ""

@@ -4,7 +4,7 @@ os:
   - osx
 go:
   - go1.9
-go_import_path: github.com/kataras/survey
+go_import_path: github.com/teamlint/survey
 install:
   - go get ./...
 script:
